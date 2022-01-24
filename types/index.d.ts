@@ -1,1 +1,1 @@
-export function parsePhoneNumber(phoneNumber: string, delimiter: string) => string
+export default function parsePhoneNumber(phoneNumber: string, delimiter?: string) => string

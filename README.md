@@ -36,22 +36,24 @@ curl -o https://cdn.jsdelivr.net/npm/@chorkaichan/jp-phone-parser/dist/jp-phone-
 ```js
 // 03-* (Tokyo)
 console.log(phoneParser('0')) // '0'
-console.log(phoneParser('03')) // '03-'
+console.log(phoneParser('03')) // '03'
+console.log(phoneParser('031')) // '03-1'
 console.log(phoneParser('0312345')) // '03-1234-5'
 console.log(phoneParser('0312345678')) // '03-1234-5678'
 
 // 05979-* (Kumano, Mie)
-console.log(phoneParser('05979')) // '05979-'
-console.log(phoneParser('059792')) // '05979-2-'
+console.log(phoneParser('05979')) // '05979'
+console.log(phoneParser('059792')) // '05979-2'
+console.log(phoneParser('0597921')) // '05979-2-1'
 console.log(phoneParser('0597921234')) // '05979-2-1234'
 
 // 090-* (mobile)
-console.log(phoneParser('090')) // '090-'
+console.log(phoneParser('0901')) // '090-1'
 console.log(phoneParser('09010012')) // '090-1001-2'
 console.log(phoneParser('09010012345')) // '090-1001-2345'
 
 // 0200-* (for data transmission)
-console.log(phoneParser('0200')) // '0200-'
+console.log(phoneParser('0200-1')) // '0200-1'
 console.log(phoneParser('0200-10000-12345')) // '0200-10000-12345'
 
 // change delimiter

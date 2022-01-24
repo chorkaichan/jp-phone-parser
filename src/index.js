@@ -77,7 +77,7 @@ const parsePhoneNumber = (phoneNumber, delimiter = '-') => {
   if (!data) {
     return phoneStr
   }
-  return `${phoneStr.slice(0, data.depth + data.position[0])}${delimiter}${phoneStr.slice(data.depth + data.position[0], data.depth + data.position[0] + data.position[1])}${data.position[1] > 0 && phoneStr.length >= data.depth + data.position[0] + data.position[1] ? delimiter : ''}${phoneStr.slice(data.depth + data.position[0] + data.position[1])}`
+  return `${phoneStr.slice(0, data.depth + data.position[0])}${phoneStr.length > data.depth + data.position[0] ? delimiter : ''}${phoneStr.slice(data.depth + data.position[0], data.depth + data.position[0] + data.position[1])}${data.position[1] > 0 && phoneStr.length > data.depth + data.position[0] + data.position[1] ? delimiter : ''}${phoneStr.slice(data.depth + data.position[0] + data.position[1])}`
 }
 
 export default parsePhoneNumber
