@@ -71,9 +71,15 @@ export default [
       ...Object.keys(pkg.devDependencies || {}),
     ],
     plugins: [
+      pluginCommonjs({
+        extensions: [ '.js' ],
+      }),
       pluginBabel({
         babelHelpers: 'bundled',
         configFile: path.resolve(__dirname, 'babel.config.js'),
+      }),
+      pluginNodeResolve({
+        browser: false,
       }),
     ],
   },
@@ -95,9 +101,15 @@ export default [
       ...Object.keys(pkg.devDependencies || {}),
     ],
     plugins: [
+      pluginCommonjs({
+        extensions: [ '.js' ],
+      }),
       pluginBabel({
         babelHelpers: 'bundled',
         configFile: path.resolve(__dirname, 'babel.config.js'),
+      }),
+      pluginNodeResolve({
+        browser: false,
       }),
     ],
   },

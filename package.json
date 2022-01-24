@@ -1,6 +1,6 @@
 {
   "name": "@chorkaichan/jp-phone-parser",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A module parses numbers according to the Japanese phone number pattern.",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
