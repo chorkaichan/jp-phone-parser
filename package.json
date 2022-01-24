@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "A module parses numbers according to the Japanese phone number pattern.",
   "main": "dist/index.js",
-  "types": "index.d.ts",
+  "types": "types/index.d.ts",
   "module": "dist/index.es.js",
   "browser": "dist/jp-phone-parser.js",
   "files": [
