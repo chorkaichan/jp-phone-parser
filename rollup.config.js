@@ -14,6 +14,7 @@ const moduleName = upperFirst(camelCase(pkg.name.replace(/^@.*\//, '')))
 
 const banner = `/*!
   ${moduleName}.js v${pkg.version}
+  ${pkg.homepage}
   Released under the ${pkg.license} License.
 */`
 
@@ -60,10 +61,10 @@ export default [
     output: [
       {
         file: pkg.module,
-        format: 'es',
+        format: 'esm',
         sourcemap: 'inline',
         banner,
-        exports: 'default',
+        exports: 'named',
       },
     ],
     external: [
