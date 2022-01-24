@@ -57,7 +57,7 @@ export default [
 
   // ES modules
   {
-    input: `src/${pkg.name.replace(/^@.*\//, '')}.js`,
+    input: 'src/index.js',
     output: [
       {
         file: pkg.module,
