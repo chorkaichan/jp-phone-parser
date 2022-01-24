@@ -1,7 +1,9 @@
 on:
   push:
+    branches:
+      - main
     tags:
-      - "v*"
+      - "!*"
 
 name: Publish To npm
 
@@ -48,24 +50,10 @@ jobs:
         env :
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
 
-      - name: Get commit summary
-        id: get_commit_summary
-        run: |
-          PREVIOUS_TAG=$(git tag --sort=-creatordate | sed -n 2p)
-          echo "PREVIOUS_TAG: $PREVIOUS_TAG"
-          COMMIT_SUMMARY="$(git log --oneline --pretty=tformat:"%h %s" $PREVIOUS_TAG..${{ github.ref }})"
-          COMMIT_SUMMARY="${COMMIT_SUMMARY//$'\n'/'%0A'}"
-          echo ::set-output name=COMMIT_SUMMARY::$COMMIT_SUMMARY
-
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: package-version-to-git-tag
+        uses: pkgdeps/action-package-version-to-git-tag@v1
         with:
-          tag_name: ${{ steps.get_version.outputs.VERSION }}
-          release_name: Release ${{ steps.get_version.outputs.VERSION }}
-          body: |
-            ${{ steps.get_commit_summary.outputs.COMMIT_SUMMARY }}
-          draft: false
-          prerelease: false
+          github_token: ${{ secrets.PERSONAL_ACCESSTOKEN }}
+          github_repo: ${{ github.repository }}
+          git_commit_sha: ${{ github.sha }}
+          git_tag_prefix: "v"
