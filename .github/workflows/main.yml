@@ -6,7 +6,7 @@ on:
 name: Publish To npm
 
 jobs:
-  publish-to-npm:
+  Tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
