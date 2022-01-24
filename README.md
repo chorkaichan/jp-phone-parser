@@ -3,6 +3,9 @@
 A module parses numbers according to the Japanese phone number pattern.
 
 ![Tests](https://github.com/chorkaichan/jp-phone-parser/actions/workflows/main.yml/badge.svg)
+![npm](https://img.shields.io/npm/v/@chorkaichan/jp-phone-parser.svg)
+![size](https://img.shields.io/bundlephobia/min/@chorkaichan/jp-phone-parser)
+![downloads](https://img.shields.io/npm/dt/@chorkaichan/jp-phone-parser)
 
 ## Installation
 
