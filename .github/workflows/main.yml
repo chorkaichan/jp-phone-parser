@@ -50,6 +50,9 @@ jobs:
         env :
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
 
+      - name: package-version
+        run: node -p -e '`PACKAGE_VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
+
       - name: package-version-to-git-tag
         uses: pkgdeps/git-tag-action@v2
         with:
