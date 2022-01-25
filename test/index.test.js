@@ -1,4 +1,67 @@
-import parsePhoneNumber from './index'
+import parsePhoneNumber from '../src'
+import dic01 from './dic01'
+import dic02 from './dic02'
+import dic03 from './dic03'
+import dic04 from './dic04'
+import dic05 from './dic05'
+import dic06 from './dic06'
+import dic07 from './dic07'
+import dic08 from './dic08'
+import dic09 from './dic09'
+
+dic01.forEach((dic) => {
+  test(`dic test ${dic[0]} to ${dic[1]}`, () => {
+    expect(parsePhoneNumber(dic[0])).toBe(dic[1])
+  })
+})
+
+dic02.forEach((dic) => {
+  test(`dic test ${dic[0]} to ${dic[1]}`, () => {
+    expect(parsePhoneNumber(dic[0])).toBe(dic[1])
+  })
+})
+
+dic03.forEach((dic) => {
+  test(`dic test ${dic[0]} to ${dic[1]}`, () => {
+    expect(parsePhoneNumber(dic[0])).toBe(dic[1])
+  })
+})
+
+dic04.forEach((dic) => {
+  test(`dic test ${dic[0]} to ${dic[1]}`, () => {
+    expect(parsePhoneNumber(dic[0])).toBe(dic[1])
+  })
+})
+
+dic05.forEach((dic) => {
+  test(`dic test ${dic[0]} to ${dic[1]}`, () => {
+    expect(parsePhoneNumber(dic[0])).toBe(dic[1])
+  })
+})
+
+dic06.forEach((dic) => {
+  test(`dic test ${dic[0]} to ${dic[1]}`, () => {
+    expect(parsePhoneNumber(dic[0])).toBe(dic[1])
+  })
+})
+
+dic07.forEach((dic) => {
+  test(`dic test ${dic[0]} to ${dic[1]}`, () => {
+    expect(parsePhoneNumber(dic[0])).toBe(dic[1])
+  })
+})
+
+dic08.forEach((dic) => {
+  test(`dic test ${dic[0]} to ${dic[1]}`, () => {
+    expect(parsePhoneNumber(dic[0])).toBe(dic[1])
+  })
+})
+
+dic09.forEach((dic) => {
+  test(`dic test ${dic[0]} to ${dic[1]}`, () => {
+    expect(parsePhoneNumber(dic[0])).toBe(dic[1])
+  })
+})
 
 // general
 test('empty', () => {

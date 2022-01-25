@@ -55,8 +55,8 @@ console.log(phoneParser('09010012')) // '090-1001-2'
 console.log(phoneParser('09010012345')) // '090-1001-2345'
 
 // 0200-* (for data transmission)
-console.log(phoneParser('0200-1')) // '0200-1'
-console.log(phoneParser('0200-10000-12345')) // '0200-10000-12345'
+console.log(phoneParser('02001')) // '0200-1'
+console.log(phoneParser('02001000012345')) // '0200-10000-12345'
 
 // change delimiter
 console.log(phoneParser('0312345678', ' ')) // '03 1234 5678'
